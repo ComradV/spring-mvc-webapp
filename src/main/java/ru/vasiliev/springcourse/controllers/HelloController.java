@@ -4,9 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.vasiliev.springcourse.Calculator;
+//import ru.vasiliev.springcourse.Calculator;
 
-import java.security.InvalidAlgorithmParameterException;
+//import java.security.InvalidAlgorithmParameterException;
 
 @Controller
 public class HelloController {
@@ -23,11 +23,19 @@ public class HelloController {
     @GetMapping("/hello")
     public String sayHello(@RequestParam("name") String nameS,
                            Model model) {
+        System.out.println("in /hello");
         model.addAttribute("name", nameS);
         return "hello_world";
     }
     @GetMapping("/home")
     public String sayHello() {
+        System.out.println("in /home");
         return "home";
     }
+    @GetMapping("/")
+    public String sayHello2() {
+        System.out.println("in /home");
+        return "home";
+    }
+
 }
