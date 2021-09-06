@@ -7,7 +7,7 @@ public class Calculator {
         switch (operation){
         case "SUB": return a - b;
         case "ADD": return a + b;
-        case "MUL": return a * b;
+        case "MULT": return a * b;
         case "DIV": return a / b;
         default:
             throw new InvalidAlgorithmParameterException("Wrong operation type!");
